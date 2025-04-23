@@ -1,94 +1,91 @@
-# 🧠 SentiLyzer
+# Finalyzer 💼📊
 
-SentiLyzer is a modern sentiment analysis app powered by Hugging Face's machine learning models.  
-Built with ❤️ using **SvelteKit + TypeScript + SCSS**, and styled like a sleek AI tool :).
+**AI-Powered Financial Sentiment Analyzer**
 
-## ✨ Features
+Finalyzer is a frontend application that analyzes financial text sentiment using AI models from Hugging Face. Enter financial statements, news, or comments and discover if the sentiment is **Positive**, **Neutral**, or **Negative** – visualized in an elegant, responsive UI.
 
-- 🧾 **Text input** with 500-character limit
-- 🤖 **Real-time sentiment analysis** via Hugging Face API
-- ✅ **Dynamic UI**: shows result with animation + emoji icon
-- 🧠 **Sentiment tips**: based on result (positive, neutral, negative)
-- 🎨 **Responsive, elegant UI** with dark mode & gradient styling
-- 🔥 **Submit via ENTER key** or click ➤
+---
 
-## 📸 Demo
+## 🚀 Live Demo
 
-![demo screenshot](./preview.png)
+[👉 View Finalyzer Online](https://finalyzer-ml.netlify.app)
 
-## 🚀 Stack
+---
 
-- [SvelteKit](https://kit.svelte.dev/)
-- TypeScript
-- SCSS (with BEM-ish style)
-- Axios (for API calls)
-- Hugging Face Inference API
-- Lucide Svelte icons
+## 📦 Tech Stack
 
-## 📦 Installation
+- **Framework:** SvelteKit + TypeScript
+- **Styling:** SCSS (modular, responsive)
+- **API:** Hugging Face Inference API – `ProsusAI/finbert`
+- **Testing:** Vitest + Testing Library
+- **Code Quality:** ESLint + Prettier + Husky
+
+---
+
+## 🛠️ How to Run Locally
+
+1. **Clone the repository**
 
 ```bash
-git clone https://github.com/twoj-login/sentilyzer.git
-cd sentilyzer
+git clone https://github.com/MichalLekacz/sentiment-analyzer
+cd finalyzer
+```
+
+2. **Install dependencies**
+
+```bash
 npm install
 ```
 
-## 🔐 Environment Variables
+3. **Set your Hugging Face API Token**
+   Create a `.env` file:
 
-You’ll need a free API token from [Hugging Face](https://huggingface.co/settings/tokens):
-
-```env
-VITE_HUGGINGFACE_TOKEN=your_hf_token_here
+```
+VITE_HUGGINGFACE_TOKEN=your_token_here
 ```
 
-Put it in `.env` in the project root.
-
-## 🧪 Running Locally
+4. **Run the app**
 
 ```bash
 npm run dev
 ```
 
-Then open `http://localhost:5173`
+---
 
-## 💡 Usage
+## 🧪 Run Tests
 
-- Type or paste any **English text**
-- Hit **Enter** or click ➤
-- Modal pops up with **sentiment result** and an AI-generated **tip**
-- Supports `POSITIVE`, `NEUTRAL`, `NEGATIVE` labels
-
-## 🧠 Limitations
-
-- The used model only supports **English** input
-- Not trained on sarcastic tone or deeper contextual analysis
-- Doesn’t support batch input (single message only)
-
-## 🔧 TODO / Improvements
-
-- Add support for Polish NLP model
-- Optional GraphQL wrapper layer
-- Unit tests (validation / API)
-
-## 🧑‍💻 Author
-
-Built with 💜 by [Michał Lekacz](https://michallekacz.pl)  
-Feel free to fork / star / roast / PR 🙃
+```bash
+npm run test
+```
 
 ---
 
-## 📄 License
+## 💡 Features
 
-MIT
+- Input text (max 500 characters) for financial sentiment analysis.
+- REST API communication with Hugging Face using **FinBERT**.
+- Dynamic UI showing results in a **modal** with:
+  - Icons (✅, ⚖️, ❌)
+  - Sentiment description & tips.
+- Quick example buttons to test **Positive**, **Neutral**, **Negative**.
+- Responsive & mobile-friendly design inspired by ChatGPT.
 
-## 🧗 Challenges Faced
+---
 
-During development, one key challenge was the requirement to use **GraphQL**.  
-While Hugging Face provides a powerful API, it **does not support GraphQL endpoints** for public sentiment analysis models.
+## 🧩 Challenges Faced
 
-### 🛠 Solution:
+- **GraphQL integration** was not feasible due to Hugging Face API limitations. REST API was used instead and explained in the code/documentation.
+- Ensuring UI consistency across devices – especially mobile responsiveness.
+- Adapting a general sentiment model to finance required switching to **FinBERT**.
 
-I explored the GraphQL capabilities but due to lack of support, I opted for a **robust REST integration using `axios`** instead.  
-This allowed me to keep the app lightweight and efficient without unnecessary backend layers.
+---
 
-The reasoning and alternative were documented, and the app remains extensible for future GraphQL wrappers if needed.
+## ✅ Requirements Covered
+
+- [x] TypeScript + SvelteKit
+- [x] REST API with free Hugging Face model
+- [x] Modal with sentiment, icons, tips
+- [x] Validation & error handling
+- [x] Unit tests (validation, API)
+- [x] ESLint + Prettier + Husky
+- [x] Responsive & intuitive UI
