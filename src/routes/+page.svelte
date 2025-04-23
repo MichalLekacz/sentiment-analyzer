@@ -114,6 +114,9 @@
 		box-sizing: border-box;
 		align-items: center;
 		text-align: center;
+		@media (max-width: 600px) {
+			padding: 1rem;
+		}
 	}
 
 	.logo-img {
@@ -121,6 +124,18 @@
 		height: auto;
 		margin-bottom: 2rem;
 		user-select: none;
+		@media (max-width: 600px) {
+			width: 140px;
+			margin-bottom: 1rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.5rem;
+
+		@media (max-width: 600px) {
+			font-size: 1.2rem;
+		}
 	}
 
 	.input-wrapper {
@@ -145,7 +160,12 @@
 				outline: none;
 				font-size: 1rem;
 				font-family: inherit;
-				padding: 1rem;
+				padding: 1.2rem;
+			}
+
+			@media (max-width: 600px) {
+				height: 200px;
+				font-size: 0.9rem;
 			}
 
 			textarea:focus {
@@ -159,9 +179,20 @@
 				padding: 0.5rem 1rem;
 				border-top: 1px solid var(--color-border);
 
+				@media (max-width: 600px) {
+					flex-direction: row;
+					align-items: stretch;
+					gap: 0.5rem;
+				}
+
 				.example-buttons {
 					display: flex;
 					gap: 0.5rem;
+
+					@media (max-width: 600px) {
+						justify-content: center;
+						flex-wrap: wrap;
+					}
 
 					button {
 						background: #2a2a2a;
@@ -171,6 +202,11 @@
 						border-radius: 0.5rem;
 						font-size: 0.85rem;
 						cursor: pointer;
+
+						@media (max-width: 600px) {
+							padding: 0.3rem 0.5rem;
+							font-size: 0.8rem;
+						}
 
 						&:hover {
 							background: #333;
@@ -186,6 +222,10 @@
 					border-radius: 0.5rem;
 					font-size: 1rem;
 					cursor: pointer;
+
+					@media (max-width: 600px) {
+						align-self: center;
+					}
 
 					&:hover {
 						transform: translateY(-1px);
@@ -209,6 +249,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+
+		@media (max-width: 600px) {
+			max-width: 90%;
+			font-size: 0.9rem;
+		}
 	}
 
 	.label {
