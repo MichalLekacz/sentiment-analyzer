@@ -29,7 +29,7 @@
 		</div>
 		<div class="desc">{descriptions[label].text}</div>
 		<div class="tip">{descriptions[label].tip}</div>
-		<button class="close-btn" on:click={onClose}>Zamknij</button>
+		<button class="close-btn" on:click={onClose}>Close</button>
 	</div>
 </div>
 
