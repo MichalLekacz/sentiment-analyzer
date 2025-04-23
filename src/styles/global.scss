@@ -1,0 +1,18 @@
+:root {
+	--color-bg: #181818;
+	--color-primary: #7f5af0;
+	--color-accent: #2cb67d;
+	--color-text: #f0f0f0;
+	--color-positive: #00c400;
+	--color-negative: #ef4444;
+	--color-neutral: #facc15;
+	--color-border: #2e2e2e;
+	--color-border-hover: #555;
+}
+
+body {
+	margin: 0;
+	font-family: 'Inter', system-ui, sans-serif;
+	background: linear-gradient(to bottom right, var(--color-bg), #1e1e1e);
+	color: var(--color-text);
+}
