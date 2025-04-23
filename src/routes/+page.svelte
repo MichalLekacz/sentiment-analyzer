@@ -5,7 +5,6 @@
 	import { validateInput } from '$lib/validation/input';
 	import { analyzeSentiment } from '$lib/api/sentiment';
 	import type { Analysis } from '$lib/types/analysis';
-
 	let text = '';
 	let error: string | null = null;
 	let loading = false;
@@ -176,7 +175,7 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				padding: 0.5rem 1rem;
+				padding: 0.5rem 0.5rem;
 				border-top: 1px solid var(--color-border);
 
 				@media (max-width: 600px) {
@@ -248,12 +247,18 @@
 		border: 1px solid var(--color-border);
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 0.2rem;
 
 		@media (max-width: 600px) {
 			max-width: 90%;
 			font-size: 0.9rem;
 		}
+	}
+
+	.result-header {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5rem;
 	}
 
 	.label {
