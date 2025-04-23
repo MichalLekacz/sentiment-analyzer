@@ -16,7 +16,7 @@
 		NEGATIVE: {
 			icon: '❌',
 			text: 'The text expresses negative sentiment.',
-			tip: 'Want to sound more friendly? Try using more positive words and softer phrasing.'
+			tip: 'Want to sound more friendly? Try using more positive words and softer phrasing. '
 		}
 	};
 </script>
