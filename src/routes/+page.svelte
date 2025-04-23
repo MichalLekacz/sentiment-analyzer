@@ -65,18 +65,19 @@
 
 			<div class="bottom-bar">
 				<div class="example-buttons">
-					<button on:click={() => (text = 'The company reported excellent earnings this quarter.')}
-						>✅ Positive</button
-					>
+					<button on:click={() => (text = 'The company reported excellent earnings this quarter.')}>
+						✅ <span>Positive</span>
+					</button>
 					<button
 						on:click={() =>
 							(text =
 								'The financial report of the XYZ company for the first quarter of 2025 showed revenues of $250 million.')}
-						>⚖️ Neutral</button
 					>
-					<button on:click={() => (text = 'The market is crashing, and investors are panicking.')}
-						>❌ Negative</button
-					>
+						⚖️ <span>Neutral</span>
+					</button>
+					<button on:click={() => (text = 'The market is crashing, and investors are panicking.')}>
+						❌ <span>Negative</span>
+					</button>
 				</div>
 				<button class="inline-button" on:click={handleAnalyze} disabled={loading}>
 					{#if loading}
@@ -114,6 +115,11 @@
 </div>
 
 <style lang="scss">
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
 	.container {
 		width: 100%;
 		max-width: 600px;
@@ -215,9 +221,19 @@
 						border-radius: 0.5rem;
 						font-size: 0.85rem;
 						cursor: pointer;
+						display: flex;
+						align-items: center;
+						gap: 0.3rem;
 
 						&:hover {
 							background: #333;
+						}
+
+						@media (max-width: 420px) {
+							span {
+								display: none;
+							}
+							padding: 0.4rem 0.5rem;
 						}
 					}
 				}
