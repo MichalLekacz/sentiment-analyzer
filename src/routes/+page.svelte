@@ -45,12 +45,11 @@
 	}
 </script>
 
-<div class="header-logo">
-	<img src="/logo.png" alt="SentiLyzer logo" class="logo-img" />
-</div>
 <div class="container">
+	<div class="header-logo">
+		<img src="/logo.png" alt="SentiLyzer logo" class="logo-img" />
+	</div>
 	<h2>Financial Sentiment Analysis</h2>
-
 	<div class="input-wrapper">
 		<div class="textarea-inner">
 			<textarea
@@ -122,9 +121,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
-		align-items: center;
+		align-items: stretch;
 		justify-content: center;
 		text-align: center;
+
 		@media (max-width: 600px) {
 			padding: 1rem;
 		}
@@ -144,7 +144,6 @@
 	.input-wrapper {
 		margin: 0 auto;
 		width: 100%;
-		max-width: 600px;
 
 		.textarea-inner {
 			width: 100%;
@@ -153,6 +152,8 @@
 			border: 1px solid var(--color-border);
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			align-items: stretch;
 			overflow: hidden;
 
 			textarea {
@@ -170,6 +171,7 @@
 				box-sizing: border-box;
 				white-space: pre-wrap;
 				word-wrap: break-word;
+
 				&::-webkit-scrollbar {
 					width: 8px;
 				}
@@ -250,6 +252,7 @@
 		border: 1px solid var(--color-border);
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 0.2rem;
 	}
 
@@ -257,6 +260,11 @@
 		display: flex;
 		align-items: flex-start;
 		gap: 0.5rem;
+	}
+
+	.confidence {
+		display: flex;
+		align-items: flext-start;
 	}
 
 	.label {
